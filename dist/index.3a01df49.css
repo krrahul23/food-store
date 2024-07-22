@@ -1,0 +1,42 @@
+.i {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+}
+
+p {
+  color: #00f;
+}
+
+.main {
+  background-color: #deb887;
+  flex-flow: column wrap;
+  place-content: center;
+  align-items: center;
+  display: flex;
+}
+
+form {
+  width: auto;
+  height: auto;
+}
+
+.intro {
+  background-color: #8a2be2;
+  flex-wrap: wrap;
+  place-content: stretch center;
+  align-items: center;
+  display: flex;
+}
+
+.name {
+  background-color: #0ff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  display: flex;
+}
+/*# sourceMappingURL=index.3a01df49.css.map */
