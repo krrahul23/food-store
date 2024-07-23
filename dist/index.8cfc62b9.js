@@ -27582,54 +27582,11 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _restaurantCard = require("./RestaurantCard");
 var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _mockData = require("../utils/mockData");
-let filteredData = [];
+var _react = require("react");
+var _s = $RefreshSig$();
 const Body = ()=>{
-    let listOfRestaurant = [
-        {
-            data: {
-                type: "F",
-                id: "74453",
-                name: "Domino's Pizza",
-                uuid: "87727dbd-7f2b-4857-9763-359624165845",
-                city: "21",
-                area: "Athwa",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-                cuisines: [
-                    "Pizzas"
-                ],
-                tags: [],
-                costForTwo: 40000,
-                costForTwoString: "\u20B9400 FOR TWO",
-                deliveryTime: 45,
-                avgRating: "4.5",
-                totalRatings: 1000,
-                new: false
-            }
-        },
-        {
-            data: {
-                type: "F",
-                id: "74458",
-                name: "KFC",
-                uuid: "87727dbd-7f2b-4857-9763-359624165845",
-                city: "21",
-                area: "Athwa",
-                totalRatingsString: "1000+ ratings",
-                cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-                cuisines: [
-                    "Pizzas"
-                ],
-                tags: [],
-                costForTwo: 40000,
-                costForTwoString: "\u20B9400 FOR TWO",
-                deliveryTime: 45,
-                avgRating: "3.8",
-                totalRatings: 1000,
-                new: false
-            }
-        }
-    ];
+    _s();
+    const [filteredData, setFilteredData] = (0, _react.useState)((0, _mockData.restaurantList));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
         children: [
@@ -27638,18 +27595,18 @@ const Body = ()=>{
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                     className: "filter-btn",
                     onClick: ()=>{
-                        filteredData = listOfRestaurant.filter((r)=>r.data.avgRating > 4);
-                        console.log(filteredData);
+                        const tempData = (0, _mockData.restaurantList).filter((r)=>r.data.avgRating > 4);
+                        setFilteredData(tempData);
                     },
                     children: "Top Rated Restaurant"
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 55,
+                    lineNumber: 11,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 54,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27658,21 +27615,22 @@ const Body = ()=>{
                         resData: r
                     }, r.data.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 66,
+                        lineNumber: 22,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 64,
+                lineNumber: 20,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 53,
+        lineNumber: 9,
         columnNumber: 5
     }, undefined);
 };
+_s(Body, "aoTfOyfOiJtbNZHukMEDvp8+FuQ=");
 _c = Body;
 exports.default = Body;
 var _c;
@@ -27683,7 +27641,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./RestaurantCard":"bMboU","../utils/mockData":"iOpE9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bMboU":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./RestaurantCard":"bMboU","../utils/mockData":"iOpE9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"bMboU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

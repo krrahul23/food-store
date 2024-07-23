@@ -1,53 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
 import { restaurantList } from "../utils/mockData";
-
-let filteredData = [];
+import { useState } from "react";
 
 const Body = () => {
-  let listOfRestaurant = [
-    {
-      data: {
-        type: "F",
-        id: "74453",
-        name: "Domino's Pizza",
-        uuid: "87727dbd-7f2b-4857-9763-359624165845",
-        city: "21",
-        area: "Athwa",
-        totalRatingsString: "1000+ ratings",
-        cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-        cuisines: ["Pizzas"],
-        tags: [],
-        costForTwo: 40000,
-        costForTwoString: "₹400 FOR TWO",
-        deliveryTime: 45,
-
-        avgRating: "4.5",
-        totalRatings: 1000,
-        new: false,
-      },
-    },
-    {
-      data: {
-        type: "F",
-        id: "74458",
-        name: "KFC",
-        uuid: "87727dbd-7f2b-4857-9763-359624165845",
-        city: "21",
-        area: "Athwa",
-        totalRatingsString: "1000+ ratings",
-        cloudinaryImageId: "bz9zkh2aqywjhpankb07",
-        cuisines: ["Pizzas"],
-        tags: [],
-        costForTwo: 40000,
-        costForTwoString: "₹400 FOR TWO",
-        deliveryTime: 45,
-
-        avgRating: "3.8",
-        totalRatings: 1000,
-        new: false,
-      },
-    },
-  ];
+  const [filteredData, setFilteredData] = useState(restaurantList);
 
   return (
     <div className="body">
@@ -55,8 +11,8 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            filteredData = listOfRestaurant.filter((r) => r.data.avgRating > 4);
-            console.log(filteredData);
+            const tempData = restaurantList.filter((r) => r.data.avgRating > 4);
+            setFilteredData(tempData);
           }}>
           Top Rated Restaurant
         </button>
