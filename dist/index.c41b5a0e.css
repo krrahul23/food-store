@@ -46,8 +46,24 @@
   width: 100%;
 }
 
+.filter {
+  display: flex;
+}
+
 .filter-btn {
   cursor: pointer;
   margin: 10px;
+}
+
+.shimmer-container {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.shimmer-card {
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 400px;
+  margin: 20px;
 }
 /*# sourceMappingURL=index.c41b5a0e.css.map */

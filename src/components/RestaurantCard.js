@@ -4,11 +4,16 @@ const styleCard = {
 };
 const RestaurantCard = ({ resData }) => {
   console.log(resData);
-  const { area, name, avgRating, cuisines, cloudinaryImageId } = resData?.data;
-  //   const area = props.data.area;
+  const { area, name, avgRating, cuisines, cloudinaryImageId } = resData?.info;
+  //   const area = props.data.areafdfsd;
   return (
     <div className="restaurant-card" style={styleCard}>
-      <img src={CDN_URL + cloudinaryImageId} className="res-logo"></img>
+      <img
+        src={
+          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          cloudinaryImageId
+        }
+        className="res-logo"></img>
       <h3>{name}</h3>
       <h5>{cuisines.join(", ")}</h5>
       <h5>{avgRating}</h5>
