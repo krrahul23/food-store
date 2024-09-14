@@ -5,7 +5,7 @@ const styleCard = {
 const RestaurantCard = ({ resData }) => {
   console.log(resData);
   const { area, name, avgRating, cuisines, cloudinaryImageId } = resData?.info;
-  //   const area = props.data.areafdfsd;
+  //   const area = props.data.area;
   return (
     <div className="restaurant-card" style={styleCard}>
       <img
